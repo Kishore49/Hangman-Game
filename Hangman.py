@@ -67,7 +67,7 @@ while turns:                                               # user enter the loop
         print(HANGMAN[0 + trail])   # initializing HANGMAN
 
         if trail == 6:
-            print(f"You ran your trails, better luck next time! \nThe word was {secret_hero}.")
+            print(f"You ran your trails, better luck next time! \nThe word was {secret_artist}.")
             exit()
 
         """
@@ -82,9 +82,9 @@ while turns:                                               # user enter the loop
                 print("_")
 
         # if len of words and secret hero is same, then consider user as a winner with time he\she took.
-        if len(words) == len(set(secret_hero)):
+        if len(words) == len(set(secret_artist)):
             time2 = datetime.datetime.now()
-            print(f"Congrats you got the word! '{secret_hero}'. "
+            print(f"Congrats you got the word! '{secret_artist}'. "
                   f"You took {time2-time1} time to guess. \nYOU'RE WINNER! ")
             exit()
 
@@ -94,7 +94,7 @@ while turns:                                               # user enter the loop
         if user guess (letter or char) is not in secret hero,
         initialize trail.
         """
-        if user_guess not in secret_hero:
+        if user_guess not in secret_artist:
             trail += 1
             print(f"wrong! {user_guess} is not in word. ")
 
